@@ -4,3 +4,5 @@
 #The long format
 #Hidden files
 # looking for numbers
+#welcome
+#betty in my first directory
