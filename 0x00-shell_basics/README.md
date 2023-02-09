@@ -6,3 +6,10 @@
 # looking for numbers
 #welcome
 #betty in my first directory
+#bye bye betty
+#bye bye my first directory
+#back to future
+#lists
+#file type
+#We are symbols, and inhabit symbol
+#Copy HTML files
