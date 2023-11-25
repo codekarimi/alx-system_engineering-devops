@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# SSH configuration file for the local SSH client to refuse to authenticate using a password
+
+Host *
+    IdentifyFile ~/.ssh/school
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials no
+    PasswordAuthentication no
+
