@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
+"""
+Created on Tue jan 02 16:22:14 2024
+
+@author: Clifford karimi
+"""
 
 from json import dump
 from requests import get

@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Sep 14 16:22:14 2020
+Created on Tue jan 02 16:22:14 2024
 
-@author: Robinson Montes
+@author: Clifford karimi
 """
 
 from requests import get
