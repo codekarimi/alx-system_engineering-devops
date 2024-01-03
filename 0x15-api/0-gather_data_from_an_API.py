@@ -1,4 +1,13 @@
-ode.com/users/{}'.format(user_id)
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+from requests import get
+from sys import argv
+
+
+if __name__ == '__main__':
+    user_id = argv[1]
+    url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
     response = get(url)
     name = response.json().get('name')
 
@@ -6,20 +15,7 @@ ode.com/users/{}'.format(user_id)
     response = get(url)
     tasks = response.json()
     done = 0
-    done_task#!/usr/bin/python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Sep 14 16:22:14 2020
-
-@author: Robinson Montes
-"""
-from requests import get
-from sys import argv
-
-
-if __name__ == '__main__':
-    user_id = argv[1]
-    url = 'https://jsonplaceholder.typics = []
+    done_tasks = []
     for task in tasks:
         if task.get('completed'):
             done_tasks.append(task)
