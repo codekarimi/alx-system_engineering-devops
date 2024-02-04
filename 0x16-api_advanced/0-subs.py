@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Function to query subscribers on a given Reddit subreddit."""
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Sep 17 11:47:53 2020
+
+@author: Robinson Montes
+"""
 import requests
 
 
