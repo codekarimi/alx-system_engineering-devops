@@ -1,24 +1,53 @@
 # Configures Nginx to serve the /number_odd_or_even/ route on AirBnB_clone_v2.
-
 server {
-    # Listen on port 80
-    listen      80 default_server;
-    listen      [::]:80 default_server ipv6only=on;
+    listen 80;
+    listen [::]:80;
 
-    # Use server IP as domain name
-    server_name 54.175.254.99;
+# Use server IP as domain name
+    server_name 100.26.159.59;
 
-    # Customize HTTP response header
+
+# Customize HTTP response header
     add_header  X-Served-By 278618-web-01;
 
-    # Serve /airbnb-onepage/ route on AirBnB_clone_v2
+
+ # Serve /airbnb-onepage/ route on AirBnB_clone_v2
     location = /airbnb-onepage/ {
         proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
     }
 
-    # Serve /number_odd_or_even/ route on AirBnB_clone_v2
+# Serve /number_odd_or_even/ route on AirBnB_clone_v2
     location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
         proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
     }
+
+ # Serve /number_odd_or_even/ route on AirBnB_clone_v2
+    #location = /airbnb-dynamic/number_odd_or_even/(any integer) {
+        #proxy_pass http://127.0.0.1:5001//airbnb-dynamic/number_odd_or_even/(any integer);
+        #proxy_set_header Host $host;
+        #proxy_set_header X-Real-IP $remote_addr;
+        ## Configures Nginx to serve the /number_odd_or_even/ route on AirBnB_clone_v2.
+server {
+    listen 80;
+    listen [::]:80;
+
+# Use server IP as domain name
+    server_name 100.26.159.59;
+
+
+# Customize HTTP response header
+    add_header  X-Served-By 278618-web-01;
+
+
+ # Serve /airbnb-onepage/ route on AirBnB_clone_v2
+    location = /airbnb-onepage/ {
+        proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+    }
+
+# Serve /number_odd_or_even/ route on AirBnB_clone_v2
+    location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
+        proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+    }
+
 
 }
