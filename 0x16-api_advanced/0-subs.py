@@ -26,5 +26,5 @@ def number_of_subscribers(subreddit):
     try:
         subscribers = reddits.get('data').get('subscribers')
         return int(subscribers)
-    except:
+    except Exception:
         return 0
